@@ -561,6 +561,9 @@ public class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
 
     /*******************************************/
 
+    private var _toolbarTintColor : UIColor?
+    private var _textField : UITextField?
+
     /** To save UITextField/UITextView object voa textField/textView notifications. */
     private weak var    _textFieldView: UIView?
     
@@ -1838,7 +1841,8 @@ public class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
                             toolbar.barStyle = UIBarStyle.Default
                             
                             if shouldToolbarUsesTextFieldTintColor {
-                                toolbar.tintColor = _textField.tintColor
+                                //toolbar.tintColor = _textField.tintColor
+                                toolbar.tintColor = UIColor.blackColor()
                             } else if let tintColor = _toolbarTintColor {
                                 toolbar.tintColor = tintColor
                             } else {
@@ -1925,7 +1929,8 @@ public class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
                                 toolbar.barStyle = UIBarStyle.Default
 
                                 if shouldToolbarUsesTextFieldTintColor {
-                                    toolbar.tintColor = _textField.tintColor
+                                    //toolbar.tintColor = _textField.tintColor
+                                    toolbar.tintColor = UIColor.blackColor()
                                 } else if let tintColor = _toolbarTintColor {
                                     toolbar.tintColor = tintColor
                                 } else {
